@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-feb-2018 15.53.37 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.OffertaQuantita" table="OFFERTE_QUANTITA">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="offerta_quantita_limite_1" type="java.lang.Integer">
+            <column name="OFFERTA_QUANTITA_LIMITE_1" />
+        </property>
+        <property name="offerta_quantita_limite_2" type="java.lang.Integer">
+            <column name="OFFERTA_QUANTITA_LIMITE_2" />
+        </property>
+        <property name="offerta_quantita_limite_3" type="java.lang.Integer">
+            <column name="OFFERTA_QUANTITA_LIMITE_3" />
+        </property>
+    </class>
+</hibernate-mapping>

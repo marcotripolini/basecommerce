@@ -1,0 +1,189 @@
+/* Compatibility styles for frameworks like bootstrap, foundation e.t.c */
+.xzoom-source img, .xzoom-preview img, .xzoom-lens img {
+  display: block;
+  max-width: none;
+  max-height: none;
+}
+/* --------------- */
+
+/* xZoom Styles below */
+.xzoom-container {
+  display: inline-block;
+}
+
+.xzoom-thumbs {
+  max-width: 480px;
+  text-align: center;
+  margin: 16px 0px 10px 0px;
+}
+
+.xzoom {
+  margin-bottom: 15px;
+}
+
+.xzoom_ {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
+}
+
+.xzoom2, .xzoom3, .xzoom4, .xzoom5 {
+  margin-bottom: 15px;
+}
+
+/*
+.xzoom2, .xzoom3, .xzoom4, .xzoom5 {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
+}
+*/
+
+/* Thumbs */
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5 {
+  margin-bottom: 10px;
+}
+
+/*
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5 {
+  border: 1px solid #cecece;
+  margin-bottom: 10px;
+}
+*/
+
+.xzoom-source, .xzoom-hidden {
+  display: block;
+  position: static;
+  float: none;
+  clear: both;
+}
+
+/* Everything out of border is hidden */
+.xzoom-hidden {
+  overflow: hidden;
+}
+
+/* Preview */
+.xzoom-preview {
+  border: 1px solid #888;
+  background: #2f4f4f;
+  box-shadow: -0px -0px 10px rgba(0,0,0,0.50);
+	width:900px;
+
+}
+
+/* Lens */
+.xzoom-lens {
+  border: 1px solid #555;
+  box-shadow: -0px -0px 10px rgba(0,0,0,0.50);
+  cursor: crosshair;
+}
+
+/* Loading */
+.xzoom-loading {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  opacity: .7;
+  background: url(../images/xloading.gif);
+  width: 48px;
+  height: 48px;
+}
+
+/* Additional class that applied to thumb when it is active */
+.xactive {
+
+}
+
+.xactive__ {
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  border: 1px solid #4aaad2;
+}
+
+/* Caption */
+.xzoom-caption {
+  position: absolute;
+  bottom: -43px;
+  left: 0;
+  background: #000;
+  width: 100%;
+  text-align: left;
+}
+
+.xzoom-caption span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+
+/* Box */
+.previewImage-center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.xzoomBox {
+	margin: 0px;
+	padding: 0px;
+	max-width: 480px;
+	height: 320px;
+  	background-color: #ffffff;
+  	text-align: center;
+	overflow: hidden;
+}
+
+.xzoomBox > img {
+  display: block;
+  margin: auto;
+	max-width: 480px;
+	width: auto;
+	height: auto;
+  max-height: 320px;
+  border: none;
+	object-fit: cover;
+}
+
+.thumbs-box {
+  display: block;
+  float: left;
+	margin: 0px 5px 0px 0px;
+	padding: 0px;
+	min-width: 80px;
+  width: 116px;
+	max-width: 116px;
+	height: 96px;
+  background-color: #fff;
+  text-align: center;
+	overflow: hidden;
+}
+
+.thumbs-box * {
+  max-width: 117px;
+	max-height: 100px;
+}
+
+.thumbs-box:last-of-type {
+	margin-right: 0px;
+}
+
+.thumbs-box a img {
+	margin: 3px auto;
+	padding: 0px 0px 0px 0px;
+	min-width: 80px;
+	width: 117px;
+	height: 90px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0) !important;
+	object-fit: cover;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4-mar-2016 11.50.20 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.beans.Categorie" table="categorie" mutable="false">
+        <id name="categoria_gds" type="java.lang.String">
+            <column name="categoria_gds" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoria_1" type="java.lang.String">
+            <column name="categoria_1" />
+        </property>
+        <property name="categoria_2" type="java.lang.String">
+            <column name="categoria_2" />
+        </property>
+        <property name="categoria_3" type="java.lang.String">
+            <column name="categoria_3" />
+        </property>
+        <property name="categoria_4" type="java.lang.String">
+            <column name="categoria_4" />
+        </property>
+        <property name="attiva_sn" type="int">
+            <column name="attiva_sn" />
+        </property>
+        <property name="tipo" type="int">
+            <column name="tipo" />
+        </property>
+        <property name="seq" type="int">
+            <column name="seq" />
+        </property>
+        <property name="categoria_1_EN" type="java.lang.String">
+            <column name="categoria_1_EN" />
+        </property>
+        <property name="categoria_2_EN" type="java.lang.String">
+            <column name="categoria_2_EN" />
+        </property>
+        <property name="categoria_1_FR" type="java.lang.String">
+            <column name="categoria_1_FR" />
+        </property>
+        <property name="categoria_2_FR" type="java.lang.String">
+            <column name="categoria_2_FR" />
+        </property>
+<!--         <property name="categoria_1_DE" type="java.lang.String"> -->
+<!--             <column name="categoria_1_DE" /> -->
+<!--         </property> -->
+<!--         <property name="categoria_2_DE" type="java.lang.String"> -->
+<!--             <column name="categoria_2_DE" /> -->
+<!--         </property> -->
+        <property name="categoria_1_HU" type="java.lang.String">
+            <column name="categoria_1_HU" />
+        </property>
+        <property name="categoria_2_HU" type="java.lang.String">
+            <column name="categoria_2_HU" />
+        </property>
+        <many-to-one name="categoria_menu" class="it.gds.beans.Categorie_menu" fetch="join" lazy="false">
+            <column name="categoria_menu" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

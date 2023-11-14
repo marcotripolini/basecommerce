@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="it.gds.beans.Siti" table="sites">
+		<id name="id" type="long">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="description" type="java.lang.String">
+			<column name="description" />
+		</property>
+		<property name="ext_description" type="java.lang.String">
+			<column name="ext_description" />
+		</property>
+		<property name="images_dir" type="java.lang.String">
+			<column name="images_dir" />
+		</property>
+		<property name="franchisee" type="boolean">
+			<column name="franchisee" />
+		</property>
+		<property name="dbname" type="java.lang.String">
+			<column name="dbname" />
+		</property>
+		<property name="centralized" type="java.lang.Boolean">
+			<column name="centralized" />
+		</property>
+		<property name="carouselized" type="java.lang.Boolean">
+			<column name="carouselized" />
+		</property>
+		<property name="active" type="boolean">
+			<column name="active" />
+		</property>
+		<property name="url_name" type="java.lang.String">
+			<column name="url_name" />
+		</property>
+		<property name="site_meta_description" type="java.lang.String">
+			<column name="site_meta_description" />
+		</property>
+		<property name="site_meta_author" type="java.lang.String">
+			<column name="site_meta_author" />
+		</property>
+		<property name="site_meta_copyright" type="java.lang.String">
+			<column name="site_meta_copyright" />
+		</property>
+		<property name="site_meta_keywords" type="java.lang.String">
+			<column name="site_meta_keywords" />
+		</property>
+	</class>
+</hibernate-mapping>

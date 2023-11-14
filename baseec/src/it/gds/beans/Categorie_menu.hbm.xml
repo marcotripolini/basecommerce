@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4-mar-2016 11.43.03 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="it.gds.beans.Categorie_menu" table="categorie_menu"
+		mutable="false">
+		<id name="id" type="java.lang.String">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		<property name="descrizione" type="java.lang.String">
+			<column name="descrizione" />
+		</property>
+		<property name="desc_EN" type="java.lang.String">
+			<column name="desc_EN" />
+		</property>
+		<property name="desc_FR" type="java.lang.String">
+			<column name="desc_FR" />
+		</property>
+		<property name="desc_DE" type="java.lang.String">
+			<column name="desc_DE" />
+		</property>
+		<property name="img" type="java.lang.String">
+			<column name="img" />
+		</property>
+		<property name="attiva_sn" type="boolean">
+			<column name="attiva_sn" />
+		</property>
+		<property name="img_totem" type="java.lang.String">
+			<column name="img_totem" />
+		</property>
+		<property name="desc_HU" type="java.lang.String">
+			<column name="desc_HU" />
+		</property>
+		<!-- <many-to-one name="dettagli" class="it.gds.beans.Categorie_menu_dettagli"
+			fetch="join" insert="false" update="false" lazy="false" not-null="false"> -->
+		<!-- <column name="id" /> -->
+		<!-- </many-to-one> -->
+	</class>
+</hibernate-mapping>

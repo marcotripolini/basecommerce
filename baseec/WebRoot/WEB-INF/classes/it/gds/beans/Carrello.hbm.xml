@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4-feb-2016 14.17.43 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.Carrello" table="carrello">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="data" type="java.util.Date">
+            <column name="data" />
+        </property>
+        <property name="id_cliente" type="long">
+            <column name="id_cliente" />
+        </property>
+        <property name="tessera" type="java.lang.String">
+            <column name="tessera" />
+        </property>
+        <property name="payerid" type="java.lang.String">
+            <column name="payerid" />
+        </property>
+        <property name="token" type="java.lang.String">
+            <column name="token" />
+        </property>
+        <property name="paymentid" type="java.lang.String">
+            <column name="paymentid" />
+        </property>
+        <property name="pagato" type="java.lang.Boolean">
+            <column name="pagato" />
+        </property>
+        <property name="pagato_il" type="java.util.Date">
+            <column name="pagato_il" />
+        </property>
+        <set name="dettagli" table="carrellodett" inverse="false" lazy="false">
+            <key>
+                <column name="id_carrello" />
+            </key>
+            <one-to-many class="it.gds.beans.Carrellodett" />
+        </set>
+    </class>
+</hibernate-mapping>

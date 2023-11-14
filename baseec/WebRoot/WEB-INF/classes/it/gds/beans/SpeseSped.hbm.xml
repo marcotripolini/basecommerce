@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 7-giu-2018 17.13.28 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.SpeseSped" table="spesesped">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="importo_min" type="java.lang.Double">
+            <column name="IMPORTO_MIN" />
+        </property>
+        <property name="importo_sped" type="java.lang.Double">
+            <column name="IMPORTO_SPED" />
+        </property>
+        <property name="descrizione" type="java.lang.String">
+            <column name="DESCRIZIONE" />
+        </property>
+        <property name="zona" type="java.lang.String">
+            <column name="ZONA" />
+        </property>
+        <property name="vincolo" type="java.lang.Integer">
+            <column name="VINCOLO" />
+        </property>
+        <property name="dettagli" type="java.lang.String">
+            <column name="DETTAGLI" />
+        </property>
+    </class>
+</hibernate-mapping>

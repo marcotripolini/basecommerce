@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# v1 2011-08-14
+
+menu_carta.pdf
+asporto.pdf
+hamburger.pdf
+
+# Use from network if available
+NETWORK:
+
+# Fallback content
+FALLBACK:

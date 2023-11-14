@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-feb-2016 12.42.52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.StoricoTessere" table="tessere_storico">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="cliente_tessera" type="java.lang.String">
+            <column name="cliente_tessera" />
+        </property>
+        <property name="data_operazione" type="java.util.Date">
+            <column name="data_operazione" />
+        </property>
+        <property name="descrizione" type="java.lang.String">
+            <column name="descrizione" />
+        </property>
+        <property name="cliente_punti" type="int">
+            <column name="cliente_punti" />
+        </property>
+        <property name="cliente_valore" type="double">
+            <column name="cliente_valore" />
+        </property>
+    </class>
+</hibernate-mapping>

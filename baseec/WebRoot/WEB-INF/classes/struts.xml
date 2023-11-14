@@ -1,0 +1,371 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+  "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Abilitata la funzione di debug di Struts2 -->
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.action.excludePattern" value="/rpc,/s/rpc,/s/rp*,/rp*" />
+	<constant name="struts.url.escapeAmp" value="false" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.custom.i18n.resources" value="global"/>
+	<constant name="struts.action.extension" value="html"/>
+
+	<package name="General" extends="struts-default,json-default">
+
+		<result-types>
+			<result-type name="json" class="com.googlecode.jsonplugin.JSONResult" />
+		</result-types>
+
+		<default-action-ref name="index" />
+
+		<!-- actions without java class -->
+
+		<action name="help">
+			<result>help.jsp</result>
+		</action>
+
+		<action name="about">
+			<result>about.jsp</result>
+		</action>
+
+<!-- 		<action name="contacts"> -->
+<!-- 			<result>contacts.jsp</result> -->
+<!-- 		</action> -->
+
+		<action name="menu">
+			<result>menu.jsp</result>
+		</action>
+
+		<action name="menu_0">
+			<result>menu_0.jsp</result>
+		</action>
+
+		<action name="menu_1">
+			<result>menu_1.jsp</result>
+		</action>
+
+		<action name="updcart">
+			<result>updcart.jsp</result>
+		</action>
+
+		<action name="lp">
+			<result>lp.jsp</result>
+		</action>
+
+		<action name="lp1">
+			<result>lp1.jsp</result>
+		</action>
+
+		<action name="lp2">
+			<result>lp2.jsp</result>
+		</action>
+
+		<action name="lp3">
+			<result>lp3.jsp</result>
+		</action>
+
+		<action name="lp4">
+			<result>lp4.jsp</result>
+		</action>
+
+		<action name="upd-watt">
+			<result>upd-watt.jsp</result>
+		</action>
+
+		<action name="login">
+			<result>login.jsp</result>
+		</action>
+
+		<action name="info">
+			<result>info.jsp</result>
+		</action>
+
+		<action name="error">
+			<result>error.jsp</result>
+		</action>
+
+		<action name="workwithus">
+			<result>workwithus.jsp</result>
+		</action>
+
+		<action name="conditions">
+			<result>conditions.jsp</result>
+		</action>
+
+		<action name="privacy">
+			<result>privacy.jsp</result>
+		</action>
+
+		<action name="mission">
+			<result>mission.jsp</result>
+		</action>
+
+		<action name="contacts">
+			<result>contacts.jsp</result>
+		</action>
+
+		<action name="showcart">
+			<result>showcart.jsp</result>
+		</action>
+
+		<action name="booking">
+			<result>booking.jsp</result>
+		</action>
+
+		<action name="payment_ok">
+			<result>buy_ok.jsp</result>
+		</action>
+
+		<action name="payment_cancel">
+			<result>buy_cancel.jsp</result>
+		</action>
+
+		<action name="payment_error">
+			<result>buy_error.jsp</result>
+		</action>
+
+		<!-- actions with java class -->
+
+		<action name="index" class="it.gds.actions.welcome" method="execute">
+			<result name="success">index.jsp</result>
+		</action>
+
+		<action name="dologin" class="it.gds.actions.doLogin" method="tryLogin">
+<!-- 			<result name="success">default.jsp</result> -->
+			<result name="error">login_error.jsp</result>
+			<result name="success" type="redirectAction">
+		        <param name="actionName">${url}</param>
+		    </result>
+		</action>
+
+		<action name="logout" class="it.gds.actions.doLogout" method="tryLogout">
+		</action>
+
+		<action name="setcookie" class="it.gds.sbeans.wCookie" method="execute">
+			<result name="success">setcookie.jsp</result>
+		</action>
+
+
+		<action name="unsetcookie" class="it.gds.sbeans.uCookie"
+			method="execute">
+			<result name="success">unsetcookie.jsp</result>
+		</action>
+
+		<action name="categories" class="it.gds.actions.GetCategories" method="execute">
+			<result name="success">inners/categories.jsp</result>
+		</action>
+
+		<action name="categoriesb" class="it.gds.actions.GetCategories" method="execute">
+			<result name="success">inners/categoriesb.jsp</result>
+		</action>
+
+		<action name="orders" class="it.gds.actions.storicoOrdini"
+			method="execute">
+			<result name="success">orders.jsp</result>
+			<result name="success_nologin">access-required.jsp</result>
+		</action>
+
+		<action name="getpage" class="it.gds.actions.GetPage" method="execute">
+			<result name="success">page.jsp</result>
+		</action>
+
+		<action name="buylist" class="it.gds.actions.listaspesaOp"
+			method="execute">
+			<result name="success">buylist.jsp</result>
+			<result name="success_nologin">access-required.jsp</result>
+		</action>
+
+		<action name="savelist" class="it.gds.actions.listaspesaOp"
+			method="saveLista">
+		</action>
+
+		<action name="listtocart" class="it.gds.actions.listaspesaOp"
+			method="listToCart">
+		</action>
+
+		<action name="actld" class="it.gds.actions.listaspesaOp"
+			method="attDisatt">
+		</action>
+
+		<action name="lupdqta" class="it.gds.actions.listaspesaOp"
+			method="addQta">
+		</action>
+
+		<action name="cart" class="it.gds.actions.cartOp" method="getCart">
+			<result name="success">cart.jsp</result>
+		</action>
+
+		<action name="other" class="it.gds.actions.cartOp" method="getOthers">
+			<result name="success">others.jsp</result>
+			<result name="none">none.jsp</result>
+		</action>
+
+		<action name="cartinner" class="it.gds.actions.cartOp" method="getCart">
+			<result name="success">cartinner.jsp</result>
+		</action>
+
+		<action name="removediscount" class="it.gds.actions.cartOp" method="removeDiscountFromCart">
+			<result name="success">cart.jsp</result>
+		</action>
+
+		<action name="wishes" class="it.gds.actions.desideriOp" method="execute">
+			<result name="success">wishes.jsp</result>
+			<result name="success_nologin">access-required.jsp</result>
+		</action>
+
+		<action name="savewish" class="it.gds.actions.desideriOp"
+			method="saveDesiderio">
+		</action>
+
+		<action name="tellus" class="it.gds.actions.mailUs" method="execute">
+			<result name="success">tellus.jsp</result>
+			<result name="success_nologin">access-required.jsp</result>
+		</action>
+
+		<action name="addtocart" class="it.gds.actions.cartOp" method="addToCart">
+
+		</action>
+
+		<action name="updqta" class="it.gds.actions.cartOp" method="addQta">
+		</action>
+
+		<action name="remfromcart" class="it.gds.actions.cartOp" method="remFromCart">
+		</action>
+
+		<action name="remprodfromcart" class="it.gds.actions.cartOp" method="remProdFromCart">
+		</action>
+
+		<action name="erasecart" class="it.gds.actions.cartOp" method="eraseCart">
+		</action>
+
+		<action name="filterbrands" class="it.gds.actions.fBrands"
+			method="execute">
+			<result name="success">fbrands.jsp</result>
+		</action>
+
+		<action name="otherbrands" class="it.gds.actions.fBrands2"
+			method="execute">
+			<result name="success">fbrands2.jsp</result>
+		</action>
+
+		<action name="offers" class="it.gds.actions.loadOffers" method="execute">
+			<result name="success">offers.jsp</result>
+			<result name="success_nologin">offers.jsp</result>
+		</action>
+
+		<action name="lastprods" class="it.gds.actions.loadLProds"
+			method="execute">
+			<result name="success">lastprods.jsp</result>
+			<result name="success_nologin">lastprods.jsp</result>
+		</action>
+
+		<action name="featuredproducts" class="it.gds.actions.loadLProds" method="execute">
+			<result name="success">featuredprods.jsp</result>
+			<result name="success_nologin">featuredprods.jsp</result>
+		</action>
+
+		<action name="find" class="it.gds.actions.loadProducts" method="executeSearch">
+			<result name="success">find.jsp</result>
+			<result name="success_nologin">find.jsp</result>
+		</action>
+
+		<action name="market" class="it.gds.actions.loadMarket" method="execute">
+			<result name="success">market.jsp</result>
+		</action>
+
+		<action name="aisles" class="it.gds.actions.loadAisle" method="execute">
+			<result name="success">aisle.jsp</result>
+		</action>
+
+		<action name="aisle" class="it.gds.actions.loadAisle" method="execute">
+			<result name="success">masteraisle.jsp</result>
+		</action>
+
+		<action name="category" class="it.gds.actions.loadProducts" method="execute">
+			<result name="success">category.jsp</result>
+			<result name="success_nologin">category.jsp</result>
+		</action>
+
+		<action name="categorynext" class="it.gds.actions.loadProducts" method="executeMulti">
+			<result name="success">categorynext.jsp</result>
+			<result name="success_nologin">categorynext.jsp</result>
+		</action>
+
+		<action name="newproducts" class="it.gds.actions.loadProducts" method="executeGetNewProds">
+			<result name="success">newproducts.jsp</result>
+			<result name="success_nologin">newproducts.jsp</result>
+		</action>
+
+		<action name="trends" class="it.gds.actions.loadTrend" method="execute">
+			<result name="success">trends.jsp</result>
+			<result name="success_nologin">trends.jsp</result>
+		</action>
+
+		<action name="searchbykey" class="it.gds.actions.loadSearch"
+			method="execute">
+			<result name="success">search.jsp</result>
+			<result name="success_nologin">search.jsp</result>
+			<result name="success_noprods">search_noprods.jsp</result>
+		</action>
+
+		<action name="searchbybrand" class="it.gds.actions.loadSearchByBrand"
+			method="execute">
+			<result name="success">featuredprods.jsp</result>
+			<result name="success_nologin">featuredprods.jsp</result>
+		</action>
+
+		<action name="showproduct" class="it.gds.actions.showProduct"
+			method="execute">
+			<result name="success">showprod.jsp</result>
+			<result name="success_nologin">showprod.jsp</result>
+		</action>
+
+		<action name="product" class="it.gds.actions.showProduct" method="execute">
+			<result name="success">product.jsp</result>
+			<result name="success_nologin">product.jsp</result>
+		</action>
+
+		<action name="reloadcontextvar" class="it.gds.actions.ReloadContextVar" method="execute">
+			<result name="success" type="redirectAction">
+		        <param name="actionName">index</param>
+		    </result>
+		</action>
+
+		<action name="sites" class="it.gds.actions.loadSites" method="execute">
+			<result name="success">menu.jsp</result>
+		</action>
+
+		<action name="ccresponse" class="it.gds.actions.PaymentResponse" method="execute">
+			<result name="success">response-ok.jsp</result>
+			<result name="error">response-ko.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>
+
+		<action name="loginsrv" class="it.gds.actions.LoginService" method="executeLogin">
+			<result name="success">index.jsp</result>
+		</action>
+
+		<action name="logoutsrv" class="it.gds.actions.LoginService" method="executeLogout">
+			<result name="success">index.jsp</result>
+		</action>
+
+		<action name="cartdet" class="it.gds.actions.cartOp" method="getCart">
+			<result name="success">cartdet.jsp</result>
+		</action>
+
+		<action name="cartdetail" class="it.gds.actions.cartOp" method="getCart">
+			<result name="success">cartdetail.jsp</result>
+		</action>
+
+		<action name="saveorder" class="it.gds.actions.SaveOrder" method="execute">
+			<result name="success">saveorder.jsp</result>
+		</action>
+
+		<action name="mdg" class="it.gds.actions.ModBistrotNovara" method="execute">
+			<result name="success">mdg.jsp</result>
+			<result name="success_nomenu">mdg_nomenu.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

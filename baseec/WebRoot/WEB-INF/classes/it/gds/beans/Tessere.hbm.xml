@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12-feb-2016 12.42.52 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.Tessere" table="tessere">
+        <id name="tessera" type="java.lang.String">
+            <column name="tessera" />
+            <generator class="assigned" />
+        </id>
+        <property name="assign_date" type="java.util.Date">
+            <column name="assign_date" />
+        </property>
+        <property name="last_use_date" type="java.util.Date">
+            <column name="last_use_date" />
+        </property>
+        <property name="score" type="long">
+            <column name="score" />
+        </property>
+        <property name="valore" type="double">
+            <column name="valore" />
+        </property>
+        <property name="codice_alternativo" type="java.lang.String">
+            <column name="codice_alternativo" />
+        </property>
+        <property name="livello_listino" type="java.lang.String">
+            <column name="livello_listino" />
+        </property>
+        <property name="livello_listino_successivo" type="java.lang.String">
+            <column name="livello_listino_successivo" />
+        </property>
+        <property name="tot_fatturato" type="double">
+            <column name="tot_fatturato" />
+        </property>
+        <property name="differenza_x_listino_succ" type="double">
+            <column name="differenza_x_listino_succ" />
+        </property>
+        <property name="periodo_fatturato" type="java.lang.String">
+            <column name="periodo_fatturato" />
+        </property>
+        <property name="livello_tessera" type="java.lang.String">
+            <column name="livello_tessera" />
+        </property>
+        <property name="data_scadenza" type="java.util.Date">
+            <column name="data_scadenza" />
+        </property>
+        <set name="storico" table="tessere_storico" inverse="false" lazy="false" fetch="select">
+            <key>
+                <column name="cliente_tessera" />
+            </key>
+            <one-to-many class="it.gds.beans.StoricoTessere" />
+        </set>
+    </class>
+</hibernate-mapping>

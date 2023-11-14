@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<!-- 		<property name="hibernate.connection.url">jdbc:mysql://62.171.138.211/master</property> -->
+<!-- 		<property name="hibernate.connection.username">root</property> -->
+<!-- 		<property name="hibernate.connection.password">Tripolo.8691</property> -->
+		<property name="hibernate.connection.datasource">java:comp/env/jdbc/ec_master</property>
+		<property name="hibernate.show_sql">false</property>
+	    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- C3P0 configuration -->
+<!-- 		<property name="hibernate.c3p0.acquire_increment">1</property> -->
+<!-- 		<property name="hibernate.c3p0.idle_test_period">0</property> -->
+<!-- 		<property name="hibernate.c3p0.max_size">100</property> -->
+<!-- 		<property name="hibernate.c3p0.max_statements">0</property> -->
+<!-- 		<property name="hibernate.c3p0.min_size">10</property> -->
+<!-- 		<property name="hibernate.c3p0.timeout">250</property> -->
+
+		<!-- C3P0 configuration -->
+<!-- 		<property name="connection.provider_class"> org.hibernate.connection.C3P0ConnectionProvider</property> -->
+<!-- 		<property name="hibernate.c3p0.acquire_increment">1</property> -->
+<!-- 		<property name="hibernate.c3p0.idle_test_period">10</property> -->
+<!-- 		<property name="hibernate.c3p0.max_size">500</property> -->
+<!-- 		<property name="hibernate.c3p0.max_statements">100</property> -->
+<!-- 		<property name="hibernate.c3p0.min_size">10</property> -->
+<!-- 		<property name="hibernate.c3p0.timeout">150</property> -->
+<!-- 		<property name="hibernate.c3p0.timeout">0</property> seconds -->
+<!--         <property name="hibernate.c3p0.acquireRetryAttempts">1</property> -->
+<!--         <property name="hibernate.c3p0.acquireRetryDelay">250</property> -->
+
+<!-- 	    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> -->
+<!-- 		<property name="hibernate.connection.url">jdbc:mysql://mysql.gds-italia.it/gds-i41_master?autoReconnect=true</property> -->
+<!-- 		<property name="hibernate.connection.username">gds-i41_dbuser</property> -->
+<!-- 		<property name="hibernate.connection.password">dbuser01</property> -->
+<!-- 		<property name="hibernate.show_sql">false</property> -->
+<!-- 	    <property name="dialect">org.hibernate.dialect.MySQLDialect</property> -->
+
+		<!-- C3P0 configuration -->
+		<!-- 		<property name="hibernate.c3p0.acquire_increment">1</property> -->
+		<!-- 		<property name="hibernate.c3p0.idle_test_period">0</property> -->
+		<!-- 		<property name="hibernate.c3p0.max_size">10</property> -->
+		<!-- 		<property name="hibernate.c3p0.max_statements">0</property> -->
+		<!-- 		<property name="hibernate.c3p0.min_size">1</property> -->
+		<!-- 		<property name="hibernate.c3p0.timeout">90</property> -->
+		<!-- 		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property> -->
+
+		<!-- C3P0 configuration -->
+	<!-- 		<property name="connection.provider_class"> org.hibernate.connection.C3P0ConnectionProvider</property> -->
+	<!-- 		<property name="hibernate.c3p0.acquire_increment">1</property> -->
+	<!-- 		<property name="hibernate.c3p0.idle_test_period">300</property> -->
+	<!-- 		<property name="hibernate.c3p0.max_statements">0</property> -->
+	<!-- 		<property name="hibernate.c3p0.min_size">5</property> -->
+	<!-- 		<property name="hibernate.c3p0.max_size">25</property> -->
+	<!-- 		<property name="hibernate.c3p0.timeout">1800</property> seconds -->
+	<!--         <property name="hibernate.c3p0.acquireRetryAttempts">10</property> -->
+	<!--         <property name="hibernate.c3p0.acquireRetryDelay">30</property> -->
+
+	<!-- 		<property name="hibernate.max_fetch_depth">3</property> -->
+	<!-- 		<property name="hibernate.c3p0.preferredTestQuery">select 1;</property> -->
+	<!-- 		<property name="hibernate.c3p0.validate">true</property> -->
+
+
+<!-- 		<property name="hibernate.c3p0.idle_test_period">10</property> -->
+<!-- 		<property name="hibernate.c3p0.timeout">150</property> -->
+<!-- 		<property name="hibernate.c3p0.timeout">0</property> seconds -->
+
+
+		<!-- mapping files -->
+		<mapping resource="it/gds/beans/Bannerleft.hbm.xml"/>
+		<mapping resource="it/gds/beans/Bannerright.hbm.xml"/>
+		<mapping resource="it/gds/beans/Slider.hbm.xml"/>
+		<mapping resource="it/gds/beans/Config.hbm.xml"/>
+		<mapping resource="it/gds/beans/StoricoTessere.hbm.xml"/>
+		<mapping resource="it/gds/beans/Tessere.hbm.xml"/>
+		<mapping resource="it/gds/beans/Clientidettagli.hbm.xml"/>
+		<mapping resource="it/gds/beans/ClientiETessera.hbm.xml"/>
+		<mapping resource="it/gds/beans/Carrellodett.hbm.xml"/>
+		<mapping resource="it/gds/beans/Carrello.hbm.xml"/>
+		<mapping resource="it/gds/beans/Listaspesadett.hbm.xml"/>
+		<mapping resource="it/gds/beans/Listaspesa.hbm.xml"/>
+		<mapping resource="it/gds/beans/Desideratidett.hbm.xml"/>
+		<mapping resource="it/gds/beans/OrdiniEDettagli.hbm.xml"/>
+		<mapping resource="it/gds/beans/Marchi.hbm.xml"/>
+		<mapping resource="it/gds/beans/Prodotti.hbm.xml"/>
+		<mapping resource="it/gds/beans/Categorie_menu_dettagli.hbm.xml"/>
+		<mapping resource="it/gds/beans/Categorie_menu.hbm.xml"/>
+		<mapping resource="it/gds/beans/Categorie.hbm.xml"/>
+		<mapping resource="it/gds/beans/Siti.hbm.xml"/>
+		<mapping resource="it/gds/beans/All_products.hbm.xml"/>
+		<mapping resource="it/gds/beans/All_brands.hbm.xml"/>
+		<mapping resource="it/gds/beans/Sessione.hbm.xml"/>
+		<mapping resource="it/gds/beans/Comuni_serviti.hbm.xml"/>
+		<mapping resource="it/gds/beans/OffertaQuantita.hbm.xml"/>
+		<mapping resource="it/gds/beans/ProductProperty.hbm.xml"/>
+		<mapping resource="it/gds/beans/SpeseSped.hbm.xml"/>
+		<mapping resource="it/gds/beans/Vetrina.hbm.xml"/>
+		<mapping resource="it/gds/beans/Message.hbm.xml"/>
+		<mapping resource="it/gds/beans/MOD.hbm.xml"/>
+		<mapping resource="it/gds/beans/ModBistrotNovara.hbm.xml"/>
+
+		<!-- /mapping files -->
+	</session-factory>
+</hibernate-configuration>

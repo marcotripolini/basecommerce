@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8-gen-2016 17.21.20 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.MOD" table="mod_bistrotnovara">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="livello" type="java.lang.Integer">
+            <column name="livello" />
+        </property>
+        <property name="data" type="java.util.Date">
+            <column name="data" />
+        </property>
+        <property name="codice_gds" type="java.lang.String">
+            <column name="codice_gds" />
+        </property>
+    </class>
+</hibernate-mapping>

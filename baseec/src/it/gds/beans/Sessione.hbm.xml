@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-apr-2017 21.51.25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.Sessione" table="SESSIONI">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="id_cliente" type="long">
+            <column name="ID_CLIENTE" />
+        </property>
+        <property name="id_carrello" type="long">
+            <column name="ID_CARRELLO" />
+        </property>
+        <property name="ip" type="java.lang.String">
+            <column name="IP" />
+        </property>
+        <property name="attivo" type="java.lang.String">
+            <column name="ATTIVO" />
+        </property>
+    </class>
+</hibernate-mapping>

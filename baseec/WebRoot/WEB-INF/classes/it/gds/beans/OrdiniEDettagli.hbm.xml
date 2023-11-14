@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-feb-2016 12.59.12 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.beans.OrdiniEDettagli" table="ordini">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="data" type="java.util.Date">
+            <column name="data" />
+        </property>
+        <property name="id_cliente" type="long">
+            <column name="id_cliente" />
+        </property>
+        <property name="id_carrello" type="long">
+            <column name="id_carrello" />
+        </property>
+        <property name="importo" type="double">
+            <column name="importo" />
+        </property>
+        <property name="spesesped" type="double">
+            <column name="spesesped" />
+        </property>
+        <property name="totale" type="double">
+            <column name="totale" />
+        </property>
+        <property name="pagato" type="java.lang.Boolean">
+            <column name="pagato" />
+        </property>
+        <property name="d_indirizzo" type="java.lang.String">
+            <column name="d_indirizzo" />
+        </property>
+        <property name="d_localita" type="java.lang.String">
+            <column name="d_localita" />
+        </property>
+        <property name="d_provincia" type="java.lang.String">
+            <column name="d_provincia" />
+        </property>
+        <property name="d_cap" type="java.lang.String">
+            <column name="d_cap" />
+        </property>
+        <property name="d_note" type="java.lang.String">
+            <column name="d_note" />
+        </property>
+        <property name="contrassegno" type="java.lang.Boolean">
+            <column name="contrassegno" />
+        </property>
+        <property name="shop_name" type="java.lang.String">
+            <column name="shop_name" />
+        </property>
+        <property name="d_nominativo" type="java.lang.String">
+            <column name="d_nominativo" />
+        </property>
+        <property name="d_email" type="java.lang.String">
+            <column name="d_email" />
+        </property>
+        <property name="d_telefono" type="java.lang.String">
+            <column name="d_telefono" />
+        </property>
+        <property name="ora_consegna" type="java.lang.String">
+            <column name="ora_consegna" />
+        </property>
+        <property name="data_consegna" type="java.util.Date">
+            <column name="data_consegna" />
+        </property>
+        <property name="tipo_consegna" type="java.lang.String">
+            <column name="tipo_consegna" />
+        </property>
+        <set name="dettagli" table="carrellodett" lazy="false" fetch="select">
+            <key>
+                <column name="id_ordine" />
+            </key>
+            <one-to-many class="it.gds.beans.Carrellodett" />
+        </set>
+    </class>
+</hibernate-mapping>

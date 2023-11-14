@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 31-gen-2018 14.23.11 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.beans.ProductProperty" table="prodotti_properties">
+        <id name="codice_gds" type="java.lang.String" >
+            <column name="CODICE_GDS" />
+            <generator class="assigned" />
+        </id>
+        <property name="filename_1" type="java.lang.String">
+            <column name="FILENAME_1" />
+        </property>
+        <property name="filename_2" type="java.lang.String">
+            <column name="FILENAME_2" />
+        </property>
+        <property name="filename_3" type="java.lang.String">
+            <column name="FILENAME_3" />
+        </property>
+        <property name="filename_4" type="java.lang.String">
+            <column name="FILENAME_4" />
+        </property>
+        <property name="dettaglio_file_1" type="java.lang.String">
+            <column name="DETTAGLIO_FILE_1" />
+        </property>
+        <property name="dettaglio_file_2" type="java.lang.String">
+            <column name="DETTAGLIO_FILE_2" />
+        </property>
+        <property name="dettaglio_file_3" type="java.lang.String">
+            <column name="DETTAGLIO_FILE_3" />
+        </property>
+        <property name="dettaglio_file_4" type="java.lang.String">
+            <column name="DETTAGLIO_FILE_4" />
+        </property>
+        <property name="fb_image" type="java.lang.String">
+            <column name="FB_IMAGE" />
+        </property>
+        <many-to-one name="offerta_quantita" class="it.gds.beans.OffertaQuantita" fetch="select" lazy="false">
+            <column name="id_offerta_quantita" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
